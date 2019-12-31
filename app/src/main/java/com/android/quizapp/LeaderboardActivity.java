@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -22,10 +23,14 @@ public class LeaderboardActivity extends AppCompatActivity {
 
 	CollectionReference usersCollection = FirebaseFirestore.getInstance().collection("users");
 
+	TextView leaderboardTextView;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_leaderboard);
+
+		leaderboardTextView = findViewById(R.id.textViewLeaderboard);
 
 		usersCollection.get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
 			@Override
@@ -34,19 +39,27 @@ public class LeaderboardActivity extends AppCompatActivity {
 				if (task.isSuccessful()) {
 
 					ArrayList<String> userNames = new ArrayList<>();
-					ArrayList<String> userScores = new ArrayList<>();
+					ArrayList<Integer> userScores = new ArrayList<>();
 
 					for (QueryDocumentSnapshot document : task.getResult()) {
 
-						String scores = document.get("GEOGRAPHY").toString().replace("[", "").replace("]", "");
-						String[] scoresArray = data.split(", ");
+						String scores = document.get("GEOGRAPHY").toString().replace("[", "").replace("]", "").replace("X", "0");
+						String[] scoresArray = scores.split(", ");
 
+						int score = 0;
+
+						for (int i = 0; i < scoresArray.length; i++) {
+
+							score = score + Integer.valueOf(scoresArray[i]);
+
+						}
 
 						userNames.add(document.getId());
+						userScores.add(score);
 
 					}
 
-					scoreFill();
+					scoreFill(userNames, userScores);
 
 				} else {
 
@@ -56,9 +69,7 @@ public class LeaderboardActivity extends AppCompatActivity {
 			}
 		});
 
-
 		Button buttonBack = findViewById(R.id.buttonLeaderboardBack);
-
 		buttonBack.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
@@ -67,12 +78,20 @@ public class LeaderboardActivity extends AppCompatActivity {
 
 			}
 		});
-
-
 	}
 
-	public void scoreFill() {
+	public void scoreFill(ArrayList<String> name, ArrayList<Integer> score) {
 
+		int length = name.size();
+		String leaderboard = "";
+
+		for (int i = 0; i < length; i++) {
+
+			leaderboard = leaderboard + (i + 1) + ". " + name.get(i) + ", score is " + score.get(i) + "\n";
+
+		}
+
+		leaderboardTextView.setText(leaderboard);
 
 	}
 

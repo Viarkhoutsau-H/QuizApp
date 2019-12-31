@@ -10,15 +10,29 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.storage.FileDownloadTask;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
+
+import java.io.File;
+import java.io.IOException;
+
+import static android.graphics.drawable.Drawable.createFromPath;
+
 
 public class SelectorActivity extends AppCompatActivity implements View.OnClickListener {
 
 	CollectionReference usersCollection = FirebaseFirestore.getInstance().collection("users");
 	CollectionReference themesCollection = FirebaseFirestore.getInstance().collection("themes");
+
+	StorageReference imageBackground = FirebaseStorage.getInstance().getReference().child(MainActivity.theme + ".jpg");
+	File localFile = File.createTempFile(MainActivity.theme, "jpg");
 
 	TextView themeInfoTextView;
 	TextView quizScoreTextView0;
@@ -34,6 +48,9 @@ public class SelectorActivity extends AppCompatActivity implements View.OnClickL
 
 	static String quizNumber;
 	static int numberOfQuestions;
+
+	public SelectorActivity() throws IOException {
+	}
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -101,6 +118,22 @@ public class SelectorActivity extends AppCompatActivity implements View.OnClickL
 					Toast.makeText(getApplicationContext(), "Failed.", Toast.LENGTH_SHORT).show();
 
 				}
+			}
+		});
+
+		imageBackground.getFile(localFile).addOnSuccessListener(new OnSuccessListener<FileDownloadTask.TaskSnapshot>() {
+			@Override
+			public void onSuccess(FileDownloadTask.TaskSnapshot taskSnapshot) {
+
+				getWindow().setBackgroundDrawable(createFromPath(localFile.getAbsolutePath()));
+
+			}
+		}).addOnFailureListener(new OnFailureListener() {
+			@Override
+			public void onFailure(@NonNull Exception e) {
+
+				Toast.makeText(SelectorActivity.this, "Network issue.", Toast.LENGTH_SHORT).show();
+
 			}
 		});
 
