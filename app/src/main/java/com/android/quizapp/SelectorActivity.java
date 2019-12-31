@@ -114,6 +114,7 @@ public class SelectorActivity extends AppCompatActivity implements View.OnClickL
 		findViewById(R.id.buttonQuiz7).setOnClickListener(this);
 		findViewById(R.id.buttonQuiz8).setOnClickListener(this);
 		findViewById(R.id.buttonQuiz9).setOnClickListener(this);
+		findViewById(R.id.buttonSelectorBack).setOnClickListener(this);
 
 	}
 
@@ -207,6 +208,18 @@ public class SelectorActivity extends AppCompatActivity implements View.OnClickL
 
 				break;
 
+			case R.id.buttonSelectorBack:
+
+				startActivity(new Intent(this, MainActivity.class));
+
+				break;
+
 		}
+	}
+
+	@Override
+	protected void onPause() {
+		super.onPause();
+		finish();
 	}
 }

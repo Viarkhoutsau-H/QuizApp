@@ -11,10 +11,16 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
+
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.Arrays;
 
 public class GameplayActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -153,11 +159,68 @@ public class GameplayActivity extends AppCompatActivity implements View.OnClickL
 
 					if (document.exists()) {
 
-						document.get(MainActivity.theme);
+						int quizNumber = Integer.valueOf(SelectorActivity.quizNumber.replace("QUIZ", ""));
+						String data = document.get(MainActivity.theme).toString().replace("[", "").replace("]", "");
+						String[] dataArray = data.split(", ");
+
+						if (dataArray[quizNumber].equals("X")) {
+
+							dataArray[quizNumber] = String.valueOf(score);
+							ArrayList<String> dataArrayList = new ArrayList<>(Arrays.asList(dataArray));
+							usersCollection.document(LogInActivity.userLogin)
+								.update(MainActivity.theme, dataArrayList)
+								.addOnSuccessListener(new OnSuccessListener<Void>() {
+									@Override
+									public void onSuccess(Void aVoid) {
+
+										Toast.makeText(getApplicationContext(), "Score set.", Toast.LENGTH_SHORT).show();
+
+									}
+								})
+								.addOnFailureListener(new OnFailureListener() {
+									@Override
+									public void onFailure(@NonNull Exception e) {
+
+										Toast.makeText(getApplicationContext(), "Failed.", Toast.LENGTH_SHORT).show();
+
+									}
+								});
+
+						} else {
+
+							if (Integer.valueOf(dataArray[quizNumber]) < score) {
+
+								dataArray[quizNumber] = String.valueOf(score);
+								ArrayList<String> dataArrayList = new ArrayList<>(Arrays.asList(dataArray));
+								usersCollection.document(LogInActivity.userLogin)
+									.update(MainActivity.theme, dataArrayList)
+									.addOnSuccessListener(new OnSuccessListener<Void>() {
+										@Override
+										public void onSuccess(Void aVoid) {
+
+											Toast.makeText(getApplicationContext(), "Score updated.", Toast.LENGTH_SHORT).show();
+
+										}
+									})
+									.addOnFailureListener(new OnFailureListener() {
+										@Override
+										public void onFailure(@NonNull Exception e) {
+
+											Toast.makeText(getApplicationContext(), "Failed.", Toast.LENGTH_SHORT).show();
+
+										}
+									});
+
+							} else {
+
+								Toast.makeText(getApplicationContext(), "The score is not broken or the maximum is reached.", Toast.LENGTH_SHORT).show();
+
+							}
+						}
 
 					} else {
 
-						Toast.makeText(getApplicationContext(), "No theme collection found.", Toast.LENGTH_SHORT).show();
+						Toast.makeText(getApplicationContext(), "User not found.", Toast.LENGTH_SHORT).show();
 
 					}
 
