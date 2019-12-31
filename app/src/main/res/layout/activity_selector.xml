@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	tools:context=".SelectorActivity">
+
+	<TextView
+		android:id="@+id/textViewThemeInfo"
+		android:layout_width="411dp"
+		android:layout_height="72dp"
+		android:layout_marginTop="8dp"
+		android:gravity="center"
+		android:textSize="36sp"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent" />
+
+	<ScrollView
+		android:layout_width="411dp"
+		android:layout_height="400dp"
+		android:layout_marginTop="8dp"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/textViewThemeInfo">
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical">
+
+			<RelativeLayout
+				android:id="@+id/RelativeLayoutQuiz0"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent">
+
+				<Button
+					android:id="@+id/buttonQuiz0"
+					android:layout_width="240dp"
+					android:layout_height="72dp"
+					android:layout_marginStart="8dp"
+					android:layout_marginTop="8dp"
+					android:gravity="center"
+					android:text="@string/quiz_1"
+					android:textAlignment="center"
+					android:textSize="24sp" />
+
+				<TextView
+					android:id="@+id/textViewQuizScore0"
+					android:layout_width="144dp"
+					android:layout_height="72dp"
+					android:layout_marginStart="256dp"
+					android:layout_marginTop="8dp"
+					android:gravity="center"
+					android:textSize="24sp" />
+
+			</RelativeLayout>
+
+			<RelativeLayout
+				android:id="@+id/RelativeLayoutQuiz1"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent">
+
+				<Button
+					android:id="@+id/buttonQuiz1"
+					android:layout_width="240dp"
+					android:layout_height="72dp"
+					android:layout_marginStart="8dp"
+					android:layout_marginTop="8dp"
+					android:gravity="center"
+					android:text="@string/quiz_2"
+					android:textAlignment="center"
+					android:textSize="24sp" />
+
+				<TextView
+					android:id="@+id/textViewQuizScore1"
+					android:layout_width="144dp"
+					android:layout_height="72dp"
+					android:layout_marginStart="256dp"
+					android:layout_marginTop="8dp"
+					android:gravity="center"
+					android:textSize="24sp" />
+
+			</RelativeLayout>
+
+			<RelativeLayout
+				android:id="@+id/RelativeLayoutQuiz2"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent">
+
+				<Button
+					android:id="@+id/buttonQuiz2"
+					android:layout_width="240dp"
+					android:layout_height="72dp"
+					android:layout_marginStart="8dp"
+					android:layout_marginTop="8dp"
+					android:gravity="center"
+					android:text="@string/quiz_3"
+					android:textAlignment="center"
+					android:textSize="24sp" />
+
+				<TextView
+					android:id="@+id/textViewQuizScore2"
+					android:layout_width="144dp"
+					android:layout_height="72dp"
+					android:layout_marginStart="256dp"
+					android:layout_marginTop="8dp"
+					android:gravity="center"
+					android:textSize="24sp" />
+
+			</RelativeLayout>
+
+
+			<RelativeLayout
+				android:id="@+id/RelativeLayoutQuiz3"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent">
+
+				<Button
+					android:id="@+id/buttonQuiz3"
+					android:layout_width="240dp"
+					android:layout_height="72dp"
+					android:layout_marginStart="8dp"
+					android:layout_marginTop="8dp"
+					android:gravity="center"
+					android:text="@string/quiz_4"
+					android:textAlignment="center"
+					android:textSize="24sp" />
+
+				<TextView
+					android:id="@+id/textViewQuizScore3"
+					android:layout_width="144dp"
+					android:layout_height="72dp"
+					android:layout_marginStart="256dp"
+					android:layout_marginTop="8dp"
+					android:gravity="center"
+					android:textSize="24sp" />
+
+			</RelativeLayout>
+
+			<RelativeLayout
+				android:id="@+id/RelativeLayoutQuiz4"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent">
+
+				<Button
+					android:id="@+id/buttonQuiz4"
+					android:layout_width="240dp"
+					android:layout_height="72dp"
+					android:layout_marginStart="8dp"
+					android:layout_marginTop="8dp"
+					android:gravity="center"
+					android:text="@string/quiz_5"
+					android:textAlignment="center"
+					android:textSize="24sp" />
+
+				<TextView
+					android:id="@+id/textViewQuizScore4"
+					android:layout_width="144dp"
+					android:layout_height="72dp"
+					android:layout_marginStart="256dp"
+					android:layout_marginTop="8dp"
+					android:gravity="center"
+					android:textSize="24sp" />
+
+			</RelativeLayout>
+
+			<RelativeLayout
+				android:id="@+id/RelativeLayoutQuiz5"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent">
+
+				<Button
+					android:id="@+id/buttonQuiz5"
+					android:layout_width="240dp"
+					android:layout_height="72dp"
+					android:layout_marginStart="8dp"
+					android:layout_marginTop="8dp"
+					android:gravity="center"
+					android:text="@string/quiz_6"
+					android:textAlignment="center"
+					android:textSize="24sp" />
+
+				<TextView
+					android:id="@+id/textViewQuizScore5"
+					android:layout_width="144dp"
+					android:layout_height="72dp"
+					android:layout_marginStart="256dp"
+					android:layout_marginTop="8dp"
+					android:gravity="center"
+					android:textSize="24sp" />
+
+			</RelativeLayout>
+
+			<RelativeLayout
+				android:id="@+id/RelativeLayoutQuiz6"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent">
+
+				<Button
+					android:id="@+id/buttonQuiz6"
+					android:layout_width="240dp"
+					android:layout_height="72dp"
+					android:layout_marginStart="8dp"
+					android:layout_marginTop="8dp"
+					android:gravity="center"
+					android:text="@string/quiz_7"
+					android:textAlignment="center"
+					android:textSize="24sp" />
+
+				<TextView
+					android:id="@+id/textViewQuizScore6"
+					android:layout_width="144dp"
+					android:layout_height="72dp"
+					android:layout_marginStart="256dp"
+					android:layout_marginTop="8dp"
+					android:gravity="center"
+					android:textSize="24sp" />
+
+			</RelativeLayout>
+
+			<RelativeLayout
+				android:id="@+id/RelativeLayoutQuiz7"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent">
+
+				<Button
+					android:id="@+id/buttonQuiz7"
+					android:layout_width="240dp"
+					android:layout_height="72dp"
+					android:layout_marginStart="8dp"
+					android:layout_marginTop="8dp"
+					android:gravity="center"
+					android:text="@string/quiz_8"
+					android:textAlignment="center"
+					android:textSize="24sp" />
+
+				<TextView
+					android:id="@+id/textViewQuizScore7"
+					android:layout_width="144dp"
+					android:layout_height="72dp"
+					android:layout_marginStart="256dp"
+					android:layout_marginTop="8dp"
+					android:gravity="center"
+					android:textSize="24sp" />
+
+			</RelativeLayout>
+
+			<RelativeLayout
+				android:id="@+id/RelativeLayoutQuiz8"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent">
+
+				<Button
+					android:id="@+id/buttonQuiz8"
+					android:layout_width="240dp"
+					android:layout_height="72dp"
+					android:layout_marginStart="8dp"
+					android:layout_marginTop="8dp"
+					android:gravity="center"
+					android:text="@string/quiz_9"
+					android:textAlignment="center"
+					android:textSize="24sp" />
+
+				<TextView
+					android:id="@+id/textViewQuizScore8"
+					android:layout_width="144dp"
+					android:layout_height="72dp"
+					android:layout_marginStart="256dp"
+					android:layout_marginTop="8dp"
+					android:gravity="center"
+					android:textSize="24sp" />
+
+			</RelativeLayout>
+
+			<RelativeLayout
+				android:id="@+id/RelativeLayoutQuiz9"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent">
+
+				<Button
+					android:id="@+id/buttonQuiz9"
+					android:layout_width="240dp"
+					android:layout_height="72dp"
+					android:layout_marginStart="8dp"
+					android:layout_marginTop="8dp"
+					android:gravity="center"
+					android:text="@string/quiz_10"
+					android:textAlignment="center"
+					android:textSize="24sp" />
+
+				<TextView
+					android:id="@+id/textViewQuizScore9"
+					android:layout_width="144dp"
+					android:layout_height="72dp"
+					android:layout_marginStart="256dp"
+					android:layout_marginTop="8dp"
+					android:gravity="center"
+					android:textSize="24sp" />
+
+			</RelativeLayout>
+		</LinearLayout>
+	</ScrollView>
+
+	<Button
+		android:id="@+id/buttonSelectorBack"
+		android:layout_width="150dp"
+		android:layout_height="54dp"
+		android:layout_marginBottom="8dp"
+		android:gravity="center"
+		android:text="@string/back"
+		android:textSize="18sp"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

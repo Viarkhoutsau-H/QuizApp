@@ -1,0 +1,30 @@
+<resources>
+	<string name="app_name">QuizApp</string>
+	<string name="login">Login</string>
+	<string name="password">Password</string>
+	<string name="signUp">Sign Up</string>
+	<string name="logIn">Log In</string>
+	<string name="selector">Select the theme:</string>
+	<string name="music">Music</string>
+	<string name="films">Films</string>
+	<string name="sport">Sport</string>
+	<string name="food_and_drinks">Food and Drinks</string>
+	<string name="geography">Geography</string>
+	<string name="television">Television</string>
+	<string name="history">History</string>
+	<string name="science">Science</string>
+	<string name="books">Books</string>
+	<string name="politics">Politics</string>
+	<string name="leaderboard">Leaderboard</string>
+	<string name="quiz_1">Quiz#1</string>
+	<string name="quiz_2">Quiz#2</string>
+	<string name="quiz_3">Quiz#3</string>
+	<string name="quiz_4">Quiz#4</string>
+	<string name="quiz_5">Quiz#5</string>
+	<string name="quiz_6">Quiz#6</string>
+	<string name="quiz_7">Quiz#7</string>
+	<string name="quiz_8">Quiz#8</string>
+	<string name="quiz_9">Quiz#9</string>
+	<string name="quiz_10">Quiz#10</string>
+	<string name="back">Back</string>
+</resources>
