@@ -91,7 +91,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 		findViewById(R.id.buttonTheme7).setOnClickListener(this);
 		findViewById(R.id.buttonTheme8).setOnClickListener(this);
 		findViewById(R.id.buttonTheme9).setOnClickListener(this);
-		findViewById(R.id.buttonSelectorBack).setOnClickListener(this);
+		findViewById(R.id.buttonLeaderboard).setOnClickListener(this);
 
 	}
 
@@ -177,9 +177,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 				break;
 
-			case R.id.buttonSelectorBack:
+			case R.id.buttonLeaderboard:
 
-				finish();
+				startActivity(new Intent(this, LeaderboardActivity.class));
 
 				break;
 

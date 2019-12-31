@@ -277,7 +277,8 @@
 			<RelativeLayout
 				android:id="@+id/RelativeLayoutQuiz9"
 				android:layout_width="match_parent"
-				android:layout_height="match_parent">
+				android:layout_height="match_parent"
+				android:layout_marginBottom="8dp">
 
 				<Button
 					android:id="@+id/buttonQuiz9"
