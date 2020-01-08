@@ -43,7 +43,7 @@ public class LeaderboardActivity extends AppCompatActivity {
 
 					for (QueryDocumentSnapshot document : task.getResult()) {
 
-						String scores = document.get("GEOGRAPHY").toString().replace("[", "").replace("]", "").replace("X", "0");
+						String scores = document.get("WITCHER").toString().replace("[", "").replace("]", "").replace("X", "0");
 						String[] scoresArray = scores.split(", ");
 
 						int score = 0;

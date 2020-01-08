@@ -117,63 +117,63 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 			case R.id.buttonTheme0:
 
-				Toast.makeText(this, "In developing..." + "\n" + "To play select the geography theme", Toast.LENGTH_SHORT).show();
-
-				break;
-
-			case R.id.buttonTheme1:
-
-				Toast.makeText(this, "In developing..." + "\n" + "To play select the geography theme", Toast.LENGTH_SHORT).show();
-
-				break;
-
-			case R.id.buttonTheme2:
-
-				Toast.makeText(this, "In developing..." + "\n" + "To play select the geography theme", Toast.LENGTH_SHORT).show();
-
-				break;
-
-			case R.id.buttonTheme3:
-
-				theme = TextButtonTheme3.getText().toString();
+				theme = TextButtonTheme0.getText().toString();
 
 				startActivity(new Intent(this, SelectorActivity.class));
 
 				break;
 
+			case R.id.buttonTheme1:
+
+				Toast.makeText(this, "In developing..." + "\n" + "To play select the witcher theme", Toast.LENGTH_SHORT).show();
+
+				break;
+
+			case R.id.buttonTheme2:
+
+				Toast.makeText(this, "In developing..." + "\n" + "To play select the witcher theme", Toast.LENGTH_SHORT).show();
+
+				break;
+
+			case R.id.buttonTheme3:
+
+				Toast.makeText(this, "In developing..." + "\n" + "To play select the witcher theme", Toast.LENGTH_SHORT).show();
+
+				break;
+
 			case R.id.buttonTheme4:
 
-				Toast.makeText(this, "In developing..." + "\n" + "To play select the geography theme", Toast.LENGTH_SHORT).show();
+				Toast.makeText(this, "In developing..." + "\n" + "To play select the witcher theme", Toast.LENGTH_SHORT).show();
 
 				break;
 
 			case R.id.buttonTheme5:
 
-				Toast.makeText(this, "In developing..." + "\n" + "To play select the geography theme", Toast.LENGTH_SHORT).show();
+				Toast.makeText(this, "In developing..." + "\n" + "To play select the witcher theme", Toast.LENGTH_SHORT).show();
 
 				break;
 
 			case R.id.buttonTheme6:
 
-				Toast.makeText(this, "In developing..." + "\n" + "To play select the geography theme", Toast.LENGTH_SHORT).show();
+				Toast.makeText(this, "In developing..." + "\n" + "To play select the witcher theme", Toast.LENGTH_SHORT).show();
 
 				break;
 
 			case R.id.buttonTheme7:
 
-				Toast.makeText(this, "In developing..." + "\n" + "To play select the geography theme", Toast.LENGTH_SHORT).show();
+				Toast.makeText(this, "In developing..." + "\n" + "To play select the witcher theme", Toast.LENGTH_SHORT).show();
 
 				break;
 
 			case R.id.buttonTheme8:
 
-				Toast.makeText(this, "In developing..." + "\n" + "To play select the geography theme", Toast.LENGTH_SHORT).show();
+				Toast.makeText(this, "In developing..." + "\n" + "To play select the witcher theme", Toast.LENGTH_SHORT).show();
 
 				break;
 
 			case R.id.buttonTheme9:
 
-				Toast.makeText(this, "In developing..." + "\n" + "To play select the geography theme", Toast.LENGTH_SHORT).show();
+				Toast.makeText(this, "In developing..." + "\n" + "To play select the witcher theme", Toast.LENGTH_SHORT).show();
 
 				break;
 

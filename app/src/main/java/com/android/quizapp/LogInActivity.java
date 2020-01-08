@@ -57,7 +57,7 @@ public class LogInActivity extends AppCompatActivity implements View.OnClickList
 
 					final String loginSignUp = String.valueOf(loginEditText.getText());
 					final String passwordSignUp = String.valueOf(passwordEditText.getText());
-					final ArrayList<String> geography = new ArrayList<>(Arrays.asList("X", "X", "X", "X", "X", "X", "X", "X", "X", "X"));
+					final ArrayList<String> witcher = new ArrayList<>(Arrays.asList("X", "X", "X", "X", "X", "X", "X", "X", "X", "X"));
 
 					usersCollection.document(loginSignUp).get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
 						@Override
@@ -75,7 +75,7 @@ public class LogInActivity extends AppCompatActivity implements View.OnClickList
 
 									user.put("login", loginSignUp);
 									user.put("password", passwordSignUp);
-									user.put("GEOGRAPHY", geography);
+									user.put("WITCHER", witcher);
 
 									usersCollection.document(loginSignUp)
 										.set(user)

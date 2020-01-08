@@ -1,34 +1,34 @@
 {
   "project_info": {
-    "project_number": "310677048680",
-    "firebase_url": "https://quizapp-b2cf5.firebaseio.com",
-    "project_id": "quizapp-b2cf5",
-    "storage_bucket": "quizapp-b2cf5.appspot.com"
+    "project_number": "644136271865",
+    "firebase_url": "https://witcherquizapp.firebaseio.com",
+    "project_id": "witcherquizapp",
+    "storage_bucket": "witcherquizapp.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:310677048680:android:45124907ce2c73623a1add",
+        "mobilesdk_app_id": "1:644136271865:android:449035ca9eb98690f94728",
         "android_client_info": {
           "package_name": "com.android.quizapp"
         }
       },
       "oauth_client": [
         {
-          "client_id": "310677048680-lqu7s1tcgpc1dpfj64nvd4bq8u015uuk.apps.googleusercontent.com",
+          "client_id": "644136271865-mkclvapva80piisum5cjjq00nm1rgp5u.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBd3h5Ozz-I0wWO6OhTXtdD0avbin_W6V0"
+          "current_key": "AIzaSyAJmkHPfn83crU5roAGl1OVGjIZS-Aa56U"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "310677048680-lqu7s1tcgpc1dpfj64nvd4bq8u015uuk.apps.googleusercontent.com",
+              "client_id": "644136271865-mkclvapva80piisum5cjjq00nm1rgp5u.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
